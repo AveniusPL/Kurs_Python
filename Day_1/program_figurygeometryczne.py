@@ -5,6 +5,7 @@ def menu():
     print (""" """)
     print ("""..::::::::::::::::::::.. || MENU || ..::::::::::::::::::::..""")
     print ("Wybierz swoją figurę w celu obliczeń pola oraz jej obwodu. Wymiary podawaj w centymentrach.")
+    print ("")
     print ("..:: 1 - prostokąt          ::..")
     print ("..:: 2 - kwadrat            ::..")
     print ("..:: 3 - równoległobok      ::..")
@@ -14,7 +15,6 @@ def menu():
     print ("..:: 7 - trapez             ::..")
     print ("..:: 8 - trapez prostokątny ::..")
     print ("..:: 9 - koniec             ::..")
-    print ("..:: 0 - MENU               ::..")
     print (""" """)
 
 def prostokąt():
@@ -165,6 +165,5 @@ while operacja != "0":
     elif operacja=="7": print (":::trapez:::\n"),trapez()
     elif operacja=="8": print(":::trapez prostokątny:::\n"), trapezprostokatny()
     elif operacja=="9": break
-    elif operacja=="0": menu()
     else: print("Wpisałeś niewłaściwą liczbę")
     operacja = input("Co wybierzesz ? ")
