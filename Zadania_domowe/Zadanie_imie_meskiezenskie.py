@@ -9,5 +9,5 @@ def sprawdzanie():
         print("To jest imie męskie.")
 sprawdzanie()
 
-#Zadanie 2
+
 
