@@ -1,10 +1,11 @@
 liczba = input("Podaj swoją liczbę")
-
+int_liczba = liczba
 if liczba.isdigit():
     # "123" >> TRUE
     # "MARYSIA" >> FALSE
-    if int(liczba) % 3 == 0 :
-        wynik = liczba / 3
+
+    if liczba % 3 == 0:
+        wynik = liczba/3
         print ("Twoja liczba jest podzielna przez 3 i jej wynik to :" + wynik)
     if liczba % 5 == 0:
         wynik = liczba / 5
