@@ -1,3 +1,5 @@
+# DANE DO PROGRAMU :
+lista_kontaktow = []
 
 print("Witaj w programie KSIĄZKA TELEFONICZNA.")
 
@@ -10,9 +12,8 @@ def menu():
     print ("..:: 2 - dodawanie kontaktu            ::..")
     print ("..:: 3 - usuwanie kontaktu             ::..")
     print ("..:: 4 - edytowanie danych w kontakcie ::..")
-    #print ("..:: 5 - menu dodatkowe                ::..")
-    #print ("..:: 6 - menu dodatkowe                ::..")
-    print ("..:: 7 - koniec                        ::..")
+    print ("..:: 5 - wyczyść listę kontaktów      ::..")
+    print ("..:: 6 - koniec                        ::..")
     print (" ")
 
 def menu_wyszukiwanie():
@@ -35,10 +36,25 @@ def menu_wyszukiwanie():
         else:
             print("Wpisałeś niewłaściwą liczbę")
         operacja = input("Co wybierzesz ? ")
+
 def dodawanie_kontaktu():
-    print("..:: 1 -  blok  ::..")
+    local_kontakt = []
+    local_imie = input("Wpisz imię: ")
+    local_nazwisko = input("Wpisz nazwisko: ")
+    local_telefon =input("Wpisz numer telefonu: ")
+    local_kontakt.append(local_imie.capitalize())
+    local_kontakt.append(local_nazwisko.capitalize())
+    local_kontakt.append(local_telefon)
+
+    if local_kontakt not in lista_kontaktow:
+        lista_kontaktow.append(local_kontakt)
+        print("Twój kontakt został dodany do listy kontaktów.")
+        print(lista_kontaktow)
+    else:
+        print("Ten kontakt znajduję się już na liście kontaktów."), dodawanie_kontaktu()
 def usuwanie_kontaktu():
     print("..:: 1 -  blok  ::..")
+
 def menu_edytowanie():
     print("|xЖx| 1 - edytowanie imienia          |xЖx|")
     print("|xЖx| 2 - edytowanie nazwiska         |xЖx|")
@@ -56,7 +72,11 @@ def menu_edytowanie():
             print(":::wybrałeś powrót do wcześniejszego menu:::\n"),  # menu_edytowanie()
         # elif operacja=="5": print (":::menu 5:::\n"),
         # elif operacja=="6": print (":::menu 6:::\n"),
-
+def reset_listy():
+    odpowiedz = input("czy na pewno chcesz usunąć listę kontaktów? Wpisz TAK lub NIE ")
+    if odpowiedz == "Tak" or "tak":
+        lista_kontaktow.clear()
+        print("Twoja lista została wyczyszczona.")
 menu()
 operacja = input("Co wybierasz? ")
 while operacja != "0":
@@ -64,8 +84,8 @@ while operacja != "0":
     elif operacja=="2": print ("::: wybrałeś dodawanie nowego kontaktu:::\n"),dodawanie_kontaktu()
     elif operacja=="3": print ("::: wybrałeś usuwanie kontaktu:::\n"), usuwanie_kontaktu()
     elif operacja=="4": print ("::: wybrałeś edytowanie kontaktu:::\n"),menu_edytowanie()
-    #elif operacja=="5": print (":::menu 5:::\n"),
+    elif operacja=="5": print (":::wybrałeś wyczyszczenie listy kontaków:::\n"),reset_listy()
     #elif operacja=="6": print (":::menu 6:::\n"),
-    elif operacja=="7": break
+    elif operacja=="6": break
     else: print("Wpisałeś niewłaściwą liczbę")
     operacja = input("Co wybierzesz ? ")
