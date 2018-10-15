@@ -6,7 +6,7 @@ print("Witaj w programie KSIĄZKA TELEFONICZNA.")
 def menu():
     print (" ")
     print ("..::::::::::::::::::::.. || MENU || ..::::::::::::::::::::..")
-    print ("Wybierz swoją figurę w celu obliczeń pola oraz jej obwodu. Wymiary podawaj w centymentrach.")
+    print ("Wybierz co planujesz zrobić : ")
     print ("")
     print ("..:: 1 - wyszukiwanie kontaktu         ::..")
     print ("..:: 2 - dodawanie kontaktu            ::..")
