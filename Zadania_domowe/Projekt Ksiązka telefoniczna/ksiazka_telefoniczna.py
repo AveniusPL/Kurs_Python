@@ -1,5 +1,5 @@
 # DANE DO PROGRAMU :
-inport lista_kontakow from l
+from
 
 
 print("Witaj w programie KSIĄZKA TELEFONICZNA.")
