@@ -1,5 +1,6 @@
 # DANE DO PROGRAMU :
-lista_kontaktow = []
+inport lista_kontakow from l
+
 
 print("Witaj w programie KSIĄZKA TELEFONICZNA.")
 
@@ -23,7 +24,7 @@ def menu_wyszukiwanie():
     print("|xЖx| 3 - wyszukiwanie po numerze telefonu |xЖx|")
     print("|xЖx| 4 - wróć                             |xЖx|")
     operacja = input("Co wybierasz? ")
-    while operacja != "0" and wyjscie == True :
+    while operacja != "0" and wyjscie:
         if operacja == "1":
             print(":::wybrałeś wyszukiwanie po imieniu:::\n")
             local_imie = input("Wpisz imię: ")
