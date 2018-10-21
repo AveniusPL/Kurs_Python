@@ -1,1 +1,1 @@
-lista_kontaktów = [[Patryk,Janusz,792008840],[Tomasz,Wolny,792009940],]
+lista_kontaktow = [[Patryk,Janusz,792008840],[Tomasz,Wolny,792009940],]
