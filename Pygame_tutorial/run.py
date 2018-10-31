@@ -1,7 +1,9 @@
 import pygame, sys
 from rocket import Rocket
 
+
 class Game(object):
+
     def __init__(self):
         #Config
         self.tps_max = 100
@@ -35,9 +37,9 @@ class Game(object):
     def tick(self):
         self.player.tick()
 
-
     def draw(self):
         self.player.draw()
+
 
 if __name__ == "__main__":
     Game()
