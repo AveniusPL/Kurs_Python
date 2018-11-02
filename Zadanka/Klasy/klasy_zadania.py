@@ -14,7 +14,7 @@ class ATM(object):
     def menu(self):
         number = input("Podaj numer konta : ")
         password = input("Poddaj hasło : ")
-
+        x = True
         self.bank = bank
         for account_number in self.bank.accounts:
             if account_number == number:
@@ -26,10 +26,30 @@ class ATM(object):
         else:
             print("MENU")
             print("1. Wyświetl saldo")
+            print("2. Wpłata środków")
+            print("3. Wypłata środków")
 
             numer_operacji = input("Podaj co chcesz zrobić: ")
-            if numer_operacji == "1":
-                print(self.account.balance)
+            while x:
+                if numer_operacji == "1":
+                    print("Twoje saldo to {}".format(self.account.balance))
+                    break
+                elif numer_operacji == "2":
+
+                    saldo_lokal = input(("Wpisz ile chcesz wprowadzić : "))
+                    self.account.balance += int(saldo_lokal)
+                    print("Twoje środki to : {}".format(self.account.balance))
+                    break
+                elif numer_operacji == "3":
+                    pass
+                else:
+                    print("Podałeś zły numer operacji")
+                    break
+
+
+
+
+
 #account.py
 class Account(object):
     def __init__(self,number,password,balance = 0):
