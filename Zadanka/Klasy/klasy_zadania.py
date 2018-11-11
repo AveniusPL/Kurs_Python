@@ -5,6 +5,14 @@ class Bank(object):
    def __init__(self,account_dict):
        self.accounts = account_dict
 
+#account.py
+class Account(object):
+    def __init__(self,number,password,balance = 0):
+        self.balance = balance
+        self.number = number
+        self.password = password
+
+
 #ATM.py
 class ATM(object):
     def __init__(self,bank):
@@ -50,13 +58,6 @@ class ATM(object):
 
 
 
-#account.py
-class Account(object):
-    def __init__(self,number,password,balance = 0):
-        self.balance = balance
-        self.number = number
-        self.password = password
-#Bank.py
 
 
 bank = Bank({
